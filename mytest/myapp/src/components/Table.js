@@ -84,7 +84,7 @@ export default class extends Component {
                     </tfoot>
                 </table>
 
-                <table id='items'>
+                <table id='items'  >
                     <thead>
                         <tr>
                             <th> {this.props.columns[1][0]} </th>

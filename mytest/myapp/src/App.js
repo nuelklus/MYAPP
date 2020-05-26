@@ -60,10 +60,6 @@ export default class App extends Component {
       ['Food Product', 'Size', 'Inventory']
   ];
 
-  // data.data_1[0].country = 'https://www.countryflags.io/ca/flat/64.png'
-  // data.data_1[1].country = 'https://www.countryflags.io/de/flat/64.png'
-  // data.data_1[2].country = 'https://www.countryflags.io/us/flat/64.png'
-
 
     return (
       <div>
