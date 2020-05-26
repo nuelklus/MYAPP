@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.star {
+  display: inline;
+  color: orange;
+
+}
+
+.nostar{
+  display:none;
+}
+
+.inventory{
+  color: lightgreen;
+}
+
+.food{
+  background-color: lightblue;
+}

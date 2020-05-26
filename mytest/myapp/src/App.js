@@ -1,26 +1,75 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Table from './components/Table'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    const data = {
+      data_1 : [
+          {
+            name: "John",
+            age: 29,
+            movie_rating: 4,
+            city: "Vancouver",
+            region: "British Columbia",
+            country: "Canada",
+          },
+          {
+            name: "Sarah",
+            age: 32,
+            movie_rating: 5,
+            city: "Frankfurt",
+            region: "Hesse",
+            country: "Germany",
+          },
+          {
+            name: "Dave",
+            age: 44,
+            movie_rating: 4,
+            city: "San Diego",
+            region: "California",
+            country: "United States",
+          },
+        ],
+      data_2 : [
+        {
+          item: "apple",
+          inventory: 12,
+          size: "medium",
+        },
+        {
+          item: "blueberry",
+          inventory: 103,
+          size: "small",
+        },
+        {
+          item: "grapefruit",
+          inventory: 4,
+          size: "large",
+        },
+        {
+          item: "strawberry",
+          inventory: 14,
+          size: "small",
+        },
+      ]
+      
+    }
+    
+    const columns = [
+      ['Name', 'Rating', 'Age', 'City', 'State/Province', 'Country'],
+      ['Food Product', 'Size', 'Inventory']
+  ];
+
+  // data.data_1[0].country = 'https://www.countryflags.io/ca/flat/64.png'
+  // data.data_1[1].country = 'https://www.countryflags.io/de/flat/64.png'
+  // data.data_1[2].country = 'https://www.countryflags.io/us/flat/64.png'
+
+
+    return (
+      <div>
+        <h1>The Table Challenge </h1>
+        <Table data={data} columns={columns} />
+      </div>
+    )
+  }
 }
-
-export default App;
